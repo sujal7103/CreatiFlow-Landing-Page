@@ -19,7 +19,7 @@ export default function Footer() {
               <h2 className="text-2xl font-bold text-white">CreatiFlow</h2>
             </div>
             <h1 className="max-w-[511px] text-xl font-light md:text-2xl">
-            Let's collaborate on something bold, strategic, and unforgettable. Share your ideas — we'll turn them into a digital masterpiece <span className="underline">Book now</span>
+            Let&apos;s collaborate on something bold, strategic, and unforgettable. Share your ideas — we&apos;ll turn them into a digital masterpiece <span className="underline">Book now</span>
             </h1>
           </div>
           <div className="flex gap-6">

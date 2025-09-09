@@ -2,16 +2,11 @@
 
 import { menu } from "@/utils/constant";
 import { useState } from "react";
-import { motion } from "framer-motion";
 import Image from "next/image";
 import { TextRoll } from "@/components/text-roll";
 
 export default function Hero() {
   const [showMenu, setShowMenu] = useState<boolean>(false);
-  const variants = {
-    initial: { opacity: 0, y: 50 },
-    animate:{ opacity: 1, y: 0 }
-  }
   return (
     <header
       className="relative h-screen w-full bg-[url(/images/hero.webp)] bg-cover bg-center">

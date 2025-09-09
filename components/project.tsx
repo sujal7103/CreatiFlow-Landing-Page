@@ -3,6 +3,7 @@
 import { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "@/hooks/use-outside-click";
+import Image from "next/image";
 
 export const CloseIcon = () => {
   return (
@@ -99,8 +100,7 @@ const cards = [
     content: () => {
       return (
         <p>
-          A comprehensive digital marketing campaign for an eco-friendly lifestyle brand that 
-          increased online engagement by 300% and drove significant sales growth. The campaign 
+          We&apos;ve crafted digital experiences that don&apos;t just look good — they perform. From sleek e-commerce platforms to bold brand identities, our work speaks for itself.ine engagement by 300% and drove significant sales growth. The campaign 
           included social media strategy, content creation, influencer partnerships, and 
           targeted advertising. <br /> <br /> Through strategic storytelling and authentic 
           brand messaging, we helped the client establish themselves as a thought leader in 
@@ -141,7 +141,7 @@ export default function Project() {
     <section className="bg-orange-red pb-11 pt-10 xl:pb-[92px] xl:pt-20">
       <div className="container mx-auto px-4 lg:px-10">
         <h1 className="text-5xl font-medium text-white xl:text-9xl mb-10">
-          PROJECT'S
+          PROJECT&apos;S
         </h1>
         
         <AnimatePresence>
@@ -184,12 +184,12 @@ export default function Project() {
                 className="w-full max-w-[500px] h-full md:h-fit md:max-h-[90%] flex flex-col bg-white/10 backdrop-blur-xl border border-white/20 shadow-2xl sm:rounded-3xl overflow-hidden"
               >
                 <motion.div layoutId={`image-${active.title}-${id}`}>
-                  <img
+                  <Image
                     width={200}
                     height={200}
                     src={active.src}
                     alt={active.title}
-                    className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
+                    className="lg:h-80 lg:w-80 h-40 w-full  object-cover object-top sm:rounded-tr-lg sm:rounded-tl-lg"
                   />
                 </motion.div>
 
@@ -239,7 +239,7 @@ export default function Project() {
         </AnimatePresence>
         
         <ul className="max-w-4xl mx-auto w-full gap-4">
-          {cards.map((card, index) => (
+          {cards.map((card) => (
             <motion.div
               layoutId={`card-${card.title}-${id}`}
               key={`card-${card.title}-${id}`}
@@ -248,7 +248,7 @@ export default function Project() {
             >
               <div className="flex gap-4 flex-col md:flex-row ">
                 <motion.div layoutId={`image-${card.title}-${id}`}>
-                  <img
+                  <Image
                     width={100}
                     height={100}
                     src={card.src}

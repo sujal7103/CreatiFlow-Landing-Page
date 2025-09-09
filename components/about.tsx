@@ -20,7 +20,7 @@ const secondImages = [
 ];
 
 export default function About() {
-  const value = "CreatiFlow is a creative digital agency built for bold thinkers, disruptive startups, and modern brands. With a team of visionaries, designers, and tech savvy storytellers, we don't just deliver - we elevate.";
+  const value = "CreatiFlow is a creative digital agency built for bold thinkers, disruptive startups, and modern brands. With a team of visionaries, designers, and tech savvy storytellers, we don&apos;t just deliver - we elevate.";
   const words = value.split(" ");
   const elementRef = useRef<HTMLParagraphElement>(null);
   const { scrollYProgress } = useScroll({

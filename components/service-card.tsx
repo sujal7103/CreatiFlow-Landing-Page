@@ -1,18 +1,16 @@
-import { cn } from "@/utils/lib";
 import { CometCard } from "@/components/ui/comet-card";
+import Image from "next/image";
 
 export default function ServiceCard({
     icon,
     title,
     subtitle,
     className,
-    iconStyle,
 }: {
     icon: string;
     title: string;
     subtitle: string;
     className?: string;
-    iconStyle?: string;
 }) {
     return (
         <CometCard className={className}>
@@ -28,11 +26,13 @@ export default function ServiceCard({
             >
                 <div className="mx-2 flex-1">
                     <div className="relative mt-2 aspect-[3/4] w-full">
-                        <img
+                        <Image
                             loading="lazy"
                             className="absolute inset-0 h-full w-full rounded-[16px] bg-[#000000] object-cover contrast-75 hover:contrast-100 transition-all duration-300"
                             alt={title}
                             src={icon}
+                            width={300}
+                            height={400}
                             style={{
                                 boxShadow: "rgba(0, 0, 0, 0.05) 0px 5px 6px 0px",
                                 opacity: 1,
